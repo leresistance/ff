@@ -7,8 +7,6 @@
 //
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CCLayer.h"
-#import "cocos2d.h"
 
 @interface GameplayLayer : CCLayer
 {

@@ -15,8 +15,14 @@
     self = [super init];
     if( self )
     {
-        
+        CGSize screenSize = [CCDirector sharedDirector].winSize;
+        //enable touches
+        self.isTouchEnabled = YES;
+        flukyFighterSprite = [CCSprite spriteWithFile:@"flukyfighter.png"];
+        [flukyFighterSprite setPosition:CGPointMake(screenSize.width/2, screenSize.height*0.17f)];
+        [self addChild:flukyFighterSprite];
     }
+    return self;
 }
 
 @end
