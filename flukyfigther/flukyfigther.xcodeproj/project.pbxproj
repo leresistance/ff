@@ -360,6 +360,7 @@
 		65B887B6153526A7009EE690 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		65B887B7153526A7009EE690 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		65B887B9153526A7009EE690 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		8A971DE3153A93E8003B4758 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -826,6 +827,7 @@
 		8A971DE2153A8DD5003B4758 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				8A971DE3153A93E8003B4758 /* Constants.h */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
