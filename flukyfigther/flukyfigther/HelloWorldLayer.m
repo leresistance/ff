@@ -37,6 +37,12 @@
 		
 		// create and initialize a Label
 		CCLabelTTF *label = [CCLabelTTF labelWithString:@"I LOVE FLUKY FACTORY!!!" fontName:@"Marker Felt" fontSize:40];
+        
+        
+        
+        //ADOLFO TESTING BRANCH
+        
+        CCLabelTTF *labelb = [CCLabelTTF labelWithString:@"TESTING MY BRANCH" fontName:@"Marker Felt" fontSize:40];
 
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
