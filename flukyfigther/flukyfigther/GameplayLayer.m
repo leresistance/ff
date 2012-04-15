@@ -10,4 +10,13 @@
 
 @implementation GameplayLayer
 
+-(id)init
+{
+    self = [super init];
+    if( self )
+    {
+        
+    }
+}
+
 @end
