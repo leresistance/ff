@@ -416,8 +416,8 @@
 		65B8865E153526A5009EE690 /* flukyfigther */ = {
 			isa = PBXGroup;
 			children = (
-				65B887B0153526A7009EE690 /* AppDelegate.h */,
-				65B887B1153526A7009EE690 /* AppDelegate.m */,
+				8A971DDB153A8D8D003B4758 /* Plist */,
+				8A971DD5153A8D4E003B4758 /* Classes */,
 				65B887B3153526A7009EE690 /* RootViewController.h */,
 				65B887B4153526A7009EE690 /* RootViewController.m */,
 				65B887B6153526A7009EE690 /* HelloWorldLayer.h */,
@@ -758,6 +758,78 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8A971DD5153A8D4E003B4758 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8A971DE2153A8DD5003B4758 /* Constants */,
+				8A971DE1153A8DCF003B4758 /* Scenes */,
+				8A971DE0153A8DC7003B4758 /* Layers */,
+				8A971DDF153A8DBD003B4758 /* GameObjects */,
+				8A971DDE153A8DAF003B4758 /* EnemyObjects */,
+				8A971DDD153A8DA8003B4758 /* PowerUps */,
+				8A971DDC153A8D9D003B4758 /* Singletons */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8A971DDB153A8D8D003B4758 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		8A971DDC153A8D9D003B4758 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				65B887B0153526A7009EE690 /* AppDelegate.h */,
+				65B887B1153526A7009EE690 /* AppDelegate.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		8A971DDD153A8DA8003B4758 /* PowerUps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PowerUps;
+			sourceTree = "<group>";
+		};
+		8A971DDE153A8DAF003B4758 /* EnemyObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = EnemyObjects;
+			sourceTree = "<group>";
+		};
+		8A971DDF153A8DBD003B4758 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		8A971DE0153A8DC7003B4758 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		8A971DE1153A8DCF003B4758 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		8A971DE2153A8DD5003B4758 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1018,6 +1090,7 @@
 				65B887BE153526A7009EE690 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
