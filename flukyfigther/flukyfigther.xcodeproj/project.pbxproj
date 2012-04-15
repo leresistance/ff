@@ -393,6 +393,7 @@
 		8A53321F153AB2410029F934 /* SneakyJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystick.m; sourceTree = "<group>"; };
 		8A533220153AB2410029F934 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
 		8A533221153AB2410029F934 /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
+		8A8A5FE7153B2C64005A0FD1 /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
 		8A971DE3153A93E8003B4758 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -915,6 +916,7 @@
 			isa = PBXGroup;
 			children = (
 				8A971DE3153A93E8003B4758 /* Constants.h */,
+				8A8A5FE7153B2C64005A0FD1 /* CommonProtocols.h */,
 			);
 			name = Constants;
 			sourceTree = "<group>";

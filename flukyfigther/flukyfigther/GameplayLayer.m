@@ -2,7 +2,7 @@
 //  GameplayLayer.m
 //  flukyfigther
 //
-//  Created by Adolfo Gutierrez on 4/15/12.
+//  Created by Luis Matute on 4/15/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
