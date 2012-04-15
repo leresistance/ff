@@ -15,6 +15,7 @@
 
 #import "RootViewController.h"
 #import "GameConfig.h"
+#import "GameScene.h"
 
 @implementation RootViewController
 
