@@ -126,6 +126,7 @@
 		65BCB5F0153A9CCD00125651 /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCB5EF153A9CCD00125651 /* BackgroundLayer.m */; };
 		65BCB5F3153AA32400125651 /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCB5F2153AA32400125651 /* GameplayLayer.m */; };
 		65BCB5F6153AA39200125651 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCB5F5153AA39200125651 /* GameScene.m */; };
+		8A5331F1153AA8640029F934 /* flukyfighter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5331F0153AA8640029F934 /* flukyfighter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -371,6 +372,7 @@
 		65BCB5F2153AA32400125651 /* GameplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayLayer.m; sourceTree = "<group>"; };
 		65BCB5F4153AA39200125651 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		65BCB5F5153AA39200125651 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		8A5331F0153AA8640029F934 /* flukyfighter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flukyfighter.png; sourceTree = "<group>"; };
 		8A971DE3153A93E8003B4758 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -774,6 +776,7 @@
 		65BCB5E9153A9A5800125651 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8A5331EE153AA8410029F934 /* Characters */,
 				65BCB5EB153A9A6500125651 /* Backgrounds */,
 			);
 			name = Images;
@@ -785,6 +788,14 @@
 				65BCB5EC153A9A8D00125651 /* BG.png */,
 			);
 			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		8A5331EE153AA8410029F934 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				8A5331F0153AA8640029F934 /* flukyfighter.png */,
+			);
+			name = Characters;
 			sourceTree = "<group>";
 		};
 		8A971DD5153A8D4E003B4758 /* Classes */ = {
@@ -926,6 +937,7 @@
 				65B8866F153526A5009EE690 /* Icon@2x.png in Resources */,
 				65B88672153526A5009EE690 /* iTunesArtwork in Resources */,
 				65BCB5ED153A9A8D00125651 /* BG.png in Resources */,
+				8A5331F1153AA8640029F934 /* flukyfighter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
