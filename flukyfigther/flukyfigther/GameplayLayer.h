@@ -7,10 +7,18 @@
 //
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "SneakyJoystick.h"
+#import "SneakyJoystickSkinnedBase.h"
+#import "SneakyButton.h"
+#import "SneakyButtonSkinnedBase.h"
+#import "ColoredCircleSprite.h"
 
 @interface GameplayLayer : CCLayer
 {
     CCSprite *flukyFighterSprite;
+    SneakyJoystick *leftJoystick;
+    SneakyButton *jumpButton;
+    SneakyButton *attackButton;
 }
 
 @end
