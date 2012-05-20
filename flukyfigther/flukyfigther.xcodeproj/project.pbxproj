@@ -134,6 +134,8 @@
 		8A533226153AB2420029F934 /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A53321D153AB2410029F934 /* SneakyButtonSkinnedBase.m */; };
 		8A533227153AB2420029F934 /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A53321F153AB2410029F934 /* SneakyJoystick.m */; };
 		8A533228153AB2420029F934 /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A533221153AB2410029F934 /* SneakyJoystickSkinnedBase.m */; };
+		8A90DF6C153E5F1A00CDAC82 /* adam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A90DF6B153E5F1A00CDAC82 /* adam.plist */; };
+		8A90DF70153E607400CDAC82 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A90DF6F153E607400CDAC82 /* GameObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,6 +396,9 @@
 		8A533220153AB2410029F934 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
 		8A533221153AB2410029F934 /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
 		8A8A5FE7153B2C64005A0FD1 /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
+		8A90DF6B153E5F1A00CDAC82 /* adam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = adam.plist; sourceTree = "<group>"; };
+		8A90DF6E153E607400CDAC82 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		8A90DF6F153E607400CDAC82 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		8A971DE3153A93E8003B4758 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -858,6 +863,7 @@
 		8A971DDB153A8D8D003B4758 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				8A90DF6B153E5F1A00CDAC82 /* adam.plist */,
 			);
 			name = Plist;
 			sourceTree = "<group>";
@@ -888,6 +894,8 @@
 		8A971DDF153A8DBD003B4758 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				8A90DF6E153E607400CDAC82 /* GameObject.h */,
+				8A90DF6F153E607400CDAC82 /* GameObject.m */,
 			);
 			name = GameObjects;
 			sourceTree = "<group>";
@@ -983,6 +991,7 @@
 				65BCB5ED153A9A8D00125651 /* BG.png in Resources */,
 				8A5331F1153AA8640029F934 /* flukyfighter.png in Resources */,
 				8A533224153AB2420029F934 /* LICENSE in Resources */,
+				8A90DF6C153E5F1A00CDAC82 /* adam.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,6 +1109,7 @@
 				8A533226153AB2420029F934 /* SneakyButtonSkinnedBase.m in Sources */,
 				8A533227153AB2420029F934 /* SneakyJoystick.m in Sources */,
 				8A533228153AB2420029F934 /* SneakyJoystickSkinnedBase.m in Sources */,
+				8A90DF70153E607400CDAC82 /* GameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
