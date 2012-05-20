@@ -13,31 +13,60 @@
 -(void)initJoystickAndButtons
 {
     CGSize screenSize = [CCDirector sharedDirector].winSize;
-    CGRect joystickBaseDimensions = CGRectMake(0, 0, 128.0f, 128.0f);
+    CGRect joystickBaseDimensions = CGRectMake(0, 0, 158.0f, 158.0f);
     CGRect jumpButtonDimensions = CGRectMake(0, 0, 64.0f, 64.0f);
     CGRect attackButtonDimensions = CGRectMake(0, 0, 64.0f, 64.0f);
     CGPoint joystickBasePosition;
     CGPoint jumpButtonPosition;
     CGPoint attackButtonPosition;
     
-    joystickBasePosition = ccp(screenSize.width*0.07f,screenSize.height*0.11f);
-    jumpButtonPosition = ccp(screenSize.width*0.93f,screenSize.height*0.11f);
-    attackButtonPosition = ccp(screenSize.width*0.93f,screenSize.height*0.35f);
+    //Identifiying what Hardware to position buttons
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        // The device is an iPad running iPhone 3.2 or later.
+        CCLOG(@"Positioning Joystick and Buttons for iPad");
+        joystickBasePosition = ccp(screenSize.width*0.12f,
+                                   screenSize.height*0.14f);
+        jumpButtonPosition = ccp(screenSize.width*0.946f,
+                                 screenSize.height*0.052f);
+        attackButtonPosition = ccp(screenSize.width*0.947f,
+                                   screenSize.height*0.169f);
+    } else {
+        // The device is an iPhone or iPod touch.
+        CCLOG(@"Positioning Joystick and Buttons for iPhone");
+        joystickBasePosition = ccp(screenSize.width*0.18f,
+                                   screenSize.height*0.28f);
+        jumpButtonPosition = ccp(screenSize.width*0.93f,
+                                 screenSize.height*0.11f);
+        attackButtonPosition = ccp(screenSize.width*0.93f,
+                                   screenSize.height*0.35f);
+    }
+    
+    
+    //joystickBasePosition = ccp(screenSize.width*0.18f,screenSize.height*0.28f);
+    //jumpButtonPosition = ccp(screenSize.width*0.93f,screenSize.height*0.11f);
+    //attackButtonPosition = ccp(screenSize.width*0.93f,screenSize.height*0.35f);
     
     SneakyJoystickSkinnedBase *joystickBase = [[[SneakyJoystickSkinnedBase alloc] init] autorelease];
     joystickBase.position = joystickBasePosition;
-    joystickBase.backgroundSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 0, 0, 128) radius:32];
-    joystickBase.thumbSprite = [ColoredCircleSprite circleWithColor:ccc4(0, 0, 255, 200) radius:16];
+    //joystickBase.backgroundSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 0, 0, 128) radius:32];
+    joystickBase.backgroundSprite = [CCSprite spriteWithFile:@"dPad.png"];
+    joystickBase.backgroundSprite.opacity = 200;
+    //joystickBase.thumbSprite = [ColoredCircleSprite circleWithColor:ccc4(0, 0, 255, 200) radius:16];
+    joystickBase.thumbSprite = [CCSprite spriteWithFile:@"joystick.png"];
     joystickBase.joystick = [[SneakyJoystick alloc] initWithRect:joystickBaseDimensions];
+    joystickBase.thumbSprite.opacity = 200;
     
-    leftJoystick =[joystickBase.joystick retain];
+    leftJoystick = [joystickBase.joystick retain];
     [self addChild:joystickBase];
     
     SneakyButtonSkinnedBase *jumpButtonBase = [[[SneakyButtonSkinnedBase alloc] init] autorelease];
     jumpButtonBase.position = jumpButtonPosition;
-    jumpButtonBase.defaultSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 128) radius:32];
-    jumpButtonBase.activatedSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 255) radius:32];
-    jumpButtonBase.pressSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 0, 0, 255) radius:32];
+    //jumpButtonBase.defaultSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 128) radius:32];
+    //jumpButtonBase.activatedSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 255) radius:32];
+    //jumpButtonBase.pressSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 0, 0, 255) radius:32];
+    jumpButtonBase.defaultSprite = [CCSprite spriteWithFile:@"button1.png"];
+    jumpButtonBase.activatedSprite = [CCSprite spriteWithFile:@"button1-pressed.png"];
+    jumpButtonBase.pressSprite = [CCSprite spriteWithFile:@"button1-pressed.png"];
     jumpButtonBase.button = [[SneakyButton alloc] initWithRect:jumpButtonDimensions];
     jumpButton = [jumpButtonBase.button retain];
     jumpButton.isToggleable = NO;

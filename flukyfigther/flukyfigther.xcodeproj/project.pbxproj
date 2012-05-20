@@ -136,6 +136,11 @@
 		8A533228153AB2420029F934 /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A533221153AB2410029F934 /* SneakyJoystickSkinnedBase.m */; };
 		8A90DF6C153E5F1A00CDAC82 /* adam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A90DF6B153E5F1A00CDAC82 /* adam.plist */; };
 		8A90DF70153E607400CDAC82 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A90DF6F153E607400CDAC82 /* GameObject.m */; };
+		8AEDE37015693DF800E731A7 /* dPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDE36F15693DF800E731A7 /* dPad.png */; };
+		8AEDE37415693F4100E731A7 /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDE37315693F4100E731A7 /* joystick.png */; };
+		8AEDE37815694A2500E731A7 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDE37615694A2500E731A7 /* button2.png */; };
+		8AEDE37A15694ADA00E731A7 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDE37915694ADA00E731A7 /* button1.png */; };
+		8AEDE37C15694BD200E731A7 /* button1-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDE37B15694BD200E731A7 /* button1-pressed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -400,6 +405,11 @@
 		8A90DF6E153E607400CDAC82 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		8A90DF6F153E607400CDAC82 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		8A971DE3153A93E8003B4758 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8AEDE36F15693DF800E731A7 /* dPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dPad.png; sourceTree = "<group>"; };
+		8AEDE37315693F4100E731A7 /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick.png; sourceTree = "<group>"; };
+		8AEDE37615694A2500E731A7 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2.png; sourceTree = "<group>"; };
+		8AEDE37915694ADA00E731A7 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
+		8AEDE37B15694BD200E731A7 /* button1-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button1-pressed.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,6 +483,7 @@
 		65B8865F153526A5009EE690 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8AEDE36315693A9C00E731A7 /* Joystick */,
 				65BCB5E9153A9A5800125651 /* Images */,
 				65B88660153526A5009EE690 /* Default.png */,
 				65B88662153526A5009EE690 /* fps_images.png */,
@@ -929,6 +940,18 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		8AEDE36315693A9C00E731A7 /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				8AEDE37B15694BD200E731A7 /* button1-pressed.png */,
+				8AEDE37915694ADA00E731A7 /* button1.png */,
+				8AEDE37615694A2500E731A7 /* button2.png */,
+				8AEDE37315693F4100E731A7 /* joystick.png */,
+				8AEDE36F15693DF800E731A7 /* dPad.png */,
+			);
+			name = Joystick;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -992,6 +1015,11 @@
 				8A5331F1153AA8640029F934 /* flukyfighter.png in Resources */,
 				8A533224153AB2420029F934 /* LICENSE in Resources */,
 				8A90DF6C153E5F1A00CDAC82 /* adam.plist in Resources */,
+				8AEDE37015693DF800E731A7 /* dPad.png in Resources */,
+				8AEDE37415693F4100E731A7 /* joystick.png in Resources */,
+				8AEDE37815694A2500E731A7 /* button2.png in Resources */,
+				8AEDE37A15694ADA00E731A7 /* button1.png in Resources */,
+				8AEDE37C15694BD200E731A7 /* button1-pressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1162,9 +1190,10 @@
 				GCC_PREFIX_HEADER = flukyfigther/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = flukyfigther/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1178,9 +1207,10 @@
 				GCC_PREFIX_HEADER = flukyfigther/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = flukyfigther/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
