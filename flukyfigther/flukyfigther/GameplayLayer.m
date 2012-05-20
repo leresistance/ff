@@ -26,25 +26,20 @@
         CCLOG(@"Positioning Joystick and Buttons for iPad");
         joystickBasePosition = ccp(screenSize.width*0.12f,
                                    screenSize.height*0.14f);
-        jumpButtonPosition = ccp(screenSize.width*0.946f,
-                                 screenSize.height*0.052f);
-        attackButtonPosition = ccp(screenSize.width*0.947f,
-                                   screenSize.height*0.169f);
+        jumpButtonPosition = ccp(screenSize.width*0.93f,
+                                 screenSize.height*0.1f);
+        attackButtonPosition = ccp(screenSize.width*0.93f,
+                                   screenSize.height*0.2f);
     } else {
         // The device is an iPhone or iPod touch.
         CCLOG(@"Positioning Joystick and Buttons for iPhone");
         joystickBasePosition = ccp(screenSize.width*0.18f,
                                    screenSize.height*0.28f);
-        jumpButtonPosition = ccp(screenSize.width*0.93f,
-                                 screenSize.height*0.11f);
-        attackButtonPosition = ccp(screenSize.width*0.93f,
-                                   screenSize.height*0.35f);
+        jumpButtonPosition = ccp(screenSize.width*0.90f,
+                                 screenSize.height*0.16f);
+        attackButtonPosition = ccp(screenSize.width*0.90f,
+                                   screenSize.height*0.38f);
     }
-    
-    
-    //joystickBasePosition = ccp(screenSize.width*0.18f,screenSize.height*0.28f);
-    //jumpButtonPosition = ccp(screenSize.width*0.93f,screenSize.height*0.11f);
-    //attackButtonPosition = ccp(screenSize.width*0.93f,screenSize.height*0.35f);
     
     SneakyJoystickSkinnedBase *joystickBase = [[[SneakyJoystickSkinnedBase alloc] init] autorelease];
     joystickBase.position = joystickBasePosition;
@@ -61,25 +56,27 @@
     
     SneakyButtonSkinnedBase *jumpButtonBase = [[[SneakyButtonSkinnedBase alloc] init] autorelease];
     jumpButtonBase.position = jumpButtonPosition;
-    //jumpButtonBase.defaultSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 128) radius:32];
-    //jumpButtonBase.activatedSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 255) radius:32];
-    //jumpButtonBase.pressSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 0, 0, 255) radius:32];
     jumpButtonBase.defaultSprite = [CCSprite spriteWithFile:@"button1.png"];
-    jumpButtonBase.activatedSprite = [CCSprite spriteWithFile:@"button1-pressed.png"];
-    jumpButtonBase.pressSprite = [CCSprite spriteWithFile:@"button1-pressed.png"];
+    jumpButtonBase.defaultSprite.opacity = 150;
+    //jumpButtonBase.activatedSprite = [CCSprite spriteWithFile:@"button1-pressed.png"];
+    jumpButtonBase.pressSprite = [CCSprite spriteWithFile:@"button1.png"];
+    jumpButtonBase.pressSprite.opacity = 255;
     jumpButtonBase.button = [[SneakyButton alloc] initWithRect:jumpButtonDimensions];
     jumpButton = [jumpButtonBase.button retain];
     jumpButton.isToggleable = NO;
+    jumpButton.isHoldable = YES;
     [self addChild:jumpButtonBase];
     
     SneakyButtonSkinnedBase *attackButtonBase = [[[SneakyButtonSkinnedBase alloc] init] autorelease];
     attackButtonBase.position = attackButtonPosition;
-    attackButtonBase.defaultSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 128) radius:32];
-    attackButtonBase.activatedSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 255, 255, 255) radius:32];
-    attackButtonBase.pressSprite = [ColoredCircleSprite circleWithColor:ccc4(255, 0, 0, 255) radius:32];
+    attackButtonBase.defaultSprite = [CCSprite spriteWithFile:@"button2.png"];
+    attackButtonBase.defaultSprite.opacity = 150;
+    attackButtonBase.pressSprite = [CCSprite spriteWithFile:@"button2.png"];
+    attackButtonBase.pressSprite.opacity = 255;
     attackButtonBase.button = [[SneakyButton alloc] initWithRect:attackButtonDimensions];
     attackButton = [attackButtonBase.button retain];
     attackButton.isToggleable = NO;
+    attackButton.isHoldable = YES;
     [self addChild:attackButtonBase];
 }
 
@@ -117,6 +114,14 @@
         flukyFighterSprite = [CCSprite spriteWithFile:@"flukyfighter.png"];
         [flukyFighterSprite setPosition:CGPointMake(screenSize.width/2, screenSize.height*0.17f)];
         [self addChild:flukyFighterSprite];
+        
+        //Uncomment this to scale down the character sprite to the iphone
+//        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//            // If NOT on the iPad, scale down the character
+//            // In your games, use this to load art sized for the device
+//            [flukyFighterSprite setScaleX:screenSize.width/1024.0f];
+//            [flukyFighterSprite setScaleY:screenSize.height/768.0f];
+//        }
         
         [self initJoystickAndButtons];
         [self scheduleUpdate]; 
